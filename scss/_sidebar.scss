@@ -1,0 +1,23 @@
+.sidebar {
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: $primary;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .4s ease;
+    bottom: 0;
+    height: 100%;
+    user-select: none;
+    z-index: 100;
+    padding: 2rem;
+
+    &.active {
+        width: 20%;
+        visibility: visible;
+        transition: all .4s ease;
+        opacity: 1;
+    }
+}

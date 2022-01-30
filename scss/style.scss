@@ -1,7 +1,22 @@
 @import 'variables';
 @import 'components';
 @import 'navbar';
+@import 'sidebar';
 @import 'index';
+
+
+body {
+    transition: all .4s ease;
+    left: 0;
+    position: relative;
+    overflow-x: hidden;
+
+    &.sidebar-active {
+        left: 20%;
+        position: relative;
+        transition: all .4s ease;
+    }
+}
 
 a {
     text-decoration: none;
