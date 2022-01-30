@@ -39,19 +39,27 @@
                             <img src="/images/navigation-image.png" alt="">
                         </div>
                     </div>
-                    <div class="col-12 col-lg-7 pe-0">
+                    <div class="col-12 col-lg-7 px-0">
                         <div class="menu">
                             <ul>
-                                <a href="">
-                                    <li>EP1/EP2</li>
-                                </a>
-                                <a href="">
+                                <div class="dropdown">
+                                    <a href="" role="button" id="dropdownMenu" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <li>EP1/EP2</li>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                                <a href="#press">
                                     <li>PRESS</li>
                                 </a>
-                                <a href="">
+                                <a href="#lyrics">
                                     <li>Lyrics</li>
                                 </a>
-                                <a href="">
+                                <a href="#videos">
                                     <li>Videos</li>
                                 </a>
                                 <a href="">
@@ -69,22 +77,57 @@
     </nav>
 
     <div class="sidebar">
-        <div class="side-image">
-            <img src="/images/logo-image-white.png" alt="">
-        </div>
-
-        <div class="side-desc">
-            Norrm is a group of broadcaster, and publisher that collaborates with friends, families, and you. We exists
-            to explore, curate, communicate and define our contemporary alternative culture and identity.
-        </div>
-
-        <div class="ep">
-            <div class="ep-title">
-                EP1
+        <div class="sidebar-container">
+            <div class="icon-close">
+                <i class="fas fa-times-circle    "></i>
             </div>
-            <div class="ep-desc">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            <div class="side-image">
+                <img src="/images/logo-white.png" alt="">
+            </div>
+
+            <div class="side-desc">
+                Norrm is a group of broadcaster, and publisher that collaborates with friends, families, and you. We
+                exists
+                to explore, curate, communicate and define our contemporary alternative culture and identity.
+            </div>
+
+            <div class="ep">
+                <div class="ep-title">
+                    EP1
+                </div>
+                <div class="ep-desc">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                </div>
+            </div>
+            <div class="ep">
+                <div class="ep-title">
+                    EP2
+                </div>
+                <div class="ep-desc">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                </div>
+            </div>
+            <div class="socials">
+                <a href="#">
+                    <i class="fab fa-instagram    "></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook-f    "></i>
+                </a>
+            </div>
+
+            <div class="side-desc">
+                Norrm is a group of broadcaster, and publisher that collaborates with friends, families, and you. We
+                exists
+                to explore, curate, communicate and define our contemporary alternative culture and identity.
             </div>
         </div>
     </div>
@@ -100,11 +143,11 @@
             <i class="fab fa-tiktok"></i>
         </a>
         <a href="#">
-            <i class="fab fa-facebook    "></i>
+            <i class="fab fa-facebook-f    "></i>
         </a>
     </div>
 
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="container-fluid">
             <div class="image">
                 <img src="/images/logo.png" alt="Guernica Club">
@@ -126,7 +169,7 @@
         </div>
     </div>
 
-    <div class="stream">
+    <div class="stream" id="stream">
         <div class="background">
             <img src="/images/stream-background.png" alt="">
         </div>
@@ -194,7 +237,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-desc">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                                 tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -221,7 +264,7 @@
                                 praesent <br><br>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-image">
                                 <img src="/images/Starry Night.png" alt="Starry Night">
                             </div>
@@ -240,7 +283,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-desc">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                                 tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -267,7 +310,7 @@
                                 praesent <br><br>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-image">
                                 <img src="/images/Hanahaki Disease.png" alt="Hanahaki Disease">
                             </div>
@@ -286,7 +329,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-desc">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                                 tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -313,7 +356,7 @@
                                 praesent <br><br>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-image">
                                 <img src="/images/Uncertainty.png" alt="Uncertainty">
                             </div>
@@ -332,7 +375,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-desc">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                                 tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -359,7 +402,7 @@
                                 praesent <br><br>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-image">
                                 <img src="/images/Uncertainty.png" alt="Pandemic">
                             </div>
@@ -378,7 +421,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-desc">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                                 tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -405,7 +448,7 @@
                                 praesent <br><br>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="pop-image">
                                 <img src="/images/Cherry Blossom.png" alt="Cherry Blossom">
                             </div>
@@ -452,7 +495,7 @@
         </div>
     </div>
 
-    <div class="press">
+    <div class="press" id="press">
         <div class="background">
             <div class="background-image">
                 <img src="/images/press-background.png" alt="Press">
@@ -509,7 +552,7 @@
         </div>
     </div>
 
-    <div class="videos">
+    <div class="videos" id="videos">
         <div class="background">
             <div class="background-image">
                 <img src="/images/videos-background.png" alt="Videos">
@@ -595,7 +638,7 @@
         </div>
     </div>
 
-    <div class="dates">
+    <div class="dates" id="dates">
         <div class="background">
             <img src="/images/dates-background.png" alt="Save the Date">
 
@@ -729,7 +772,7 @@
             </div>
 
             <div class="row footer-end align-items-end">
-                <div class="col-4">
+                <div class="col-6 col-md-4">
                     <div>Stream now</div>
                     <div class="d-flex streams">
                         <a href="">
@@ -741,9 +784,12 @@
                         <a href="">
                             <i class="fab fa-soundcloud    "></i>
                         </a>
+                        <a href="">
+                            <i class="fab fa-youtube    "></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4">
                     <div>Catch us</div>
                     <div class="d-flex streams">
                         <a href="#">
@@ -756,12 +802,12 @@
                             <i class="fab fa-tiktok"></i>
                         </a>
                         <a href="#">
-                            <i class="fab fa-facebook    "></i>
+                            <i class="fab fa-facebook-f    "></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="text-end">
+                <div class="col-12 col-md-4 end-image">
+                    <div>
                         <img src="/images/logo-image-white.png" alt="">
                     </div>
                 </div>
@@ -774,25 +820,29 @@
 
     $(document).ready(function () {
         $('.items-more').hide();
-        $('.side-desc').hide();
-        $('.ep').hide();
+        $('.sidebar-container').hide();
     });
-
-    $('#side_click').click(function (e) { 
-        e.preventDefault();
+    function sidebarSlide() {
         var timeoutSidebar = $('.sidebar').hasClass('active') ? 300 : 0;
         var timeout = $('.sidebar').hasClass('active') ? 0 : 300;
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.sidebar').toggleClass('active');
             $('body').toggleClass('sidebar-active');
         }, timeoutSidebar);
 
-        setTimeout(function() {
-            $('.side-desc').fadeToggle('fast');
-            $('.ep').fadeToggle('fast');
+        setTimeout(function () {
+            $('.sidebar-container').fadeToggle('fast');
         }, timeout);
+    }
+
+    $('#side_click').click(function () {
+        sidebarSlide();
     });
+
+    $('.sidebar .icon-close').click(function () {
+        sidebarSlide();
+    })
     $('.title').click(function () {
         $(this).toggleClass('active');
         $('.title-alt').toggleClass('active');

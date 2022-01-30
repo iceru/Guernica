@@ -5,16 +5,22 @@
         img {
             width: 100%;
         }
+
+        @include breakpoint(untilTablet) {
+            width: 30%;
+            margin-bottom: 2rem;
+        }
     }
     .text {
         color: $primary;
-        font-size: 2rem;
         text-transform: uppercase;
-        margin-top: -1rem !important;
+        font-size: 1.25rem;
         
         @include breakpoint(laptop) {
             width: 80%;
             margin: auto;
+            margin-top: -1rem !important;
+            font-size: 2rem;
         }
     }
 
@@ -31,6 +37,7 @@
 
 .floating-social {
     position: fixed;
+    display: block;
     color: white;
     background-color: black;
     padding: 0 .5rem;
@@ -39,6 +46,10 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+
+    @include breakpoint(mobileonly) {
+        display: none;
+    }
 
     a {
         padding: .5rem;
@@ -88,9 +99,16 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
+        z-index: 10;
         
         h1 {
             font-size: 120px;
+        }
+
+        @include breakpoint(untilTablet) {
+            h1 {
+                font-size: 3.5rem;
+            }
         }
     }
 }
@@ -119,7 +137,11 @@
                 cursor: pointer;
                 transition: all .4s ease;
                 padding-bottom: 3rem;
-                display: inline-block;                
+                display: inline-block;   
+                
+                @include breakpoint(untilTablet) {
+                   font-size: 3rem;
+                }
 
                 &.active {
                     color: $primary;
@@ -132,6 +154,11 @@
                 color: white !important;
                 font-size: 1.5rem;
                 margin-bottom: 3rem;
+                text-transform: uppercase;
+
+                @include breakpoint(untilTablet) {
+                    font-size: 1.25rem;
+                }
             }
 
             .button-wrapper {
@@ -201,6 +228,28 @@
                 width: 70%;
             }
         }
+        @include breakpoint(untilTablet) {
+            &.active {
+                padding: 2rem 0;
+            }
+            .pop-title {
+                font-size: 2.5rem;
+                margin-left: 0;
+                margin-bottom: 2rem;
+            }
+
+            .close-song {
+                font-size: 1.5rem;
+            }
+
+            .pop-desc {
+                font-size: 1rem;
+            }
+
+            .pop-image {
+                text-align: center;
+            }
+        }
     }
 
     .songs-wrapper {
@@ -225,17 +274,20 @@
             color: $primary;
             border: 1px solid $primary;
             cursor: pointer;
+            font-size: 3rem;
 
             .number {
-                font-size: 3rem;
                 margin-right: 1rem;
                 font-weight: bold;
             }
 
             .item-title {
-                font-size: 3rem;
                 margin-top: 1rem;
                 text-transform: uppercase;
+            }
+
+            @include breakpoint(untilTablet) {
+                font-size: 1.5rem;
             }
         }
     }
@@ -265,6 +317,19 @@
                 text-transform: uppercase;
                 color: black;
             }
+
+            @include breakpoint(untilTablet) {
+                flex-wrap: wrap;
+                .image-wrapper {
+                    margin: 0;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+               .text {
+                    font-size: 1rem;
+               }
+            }
         }
     }
 }
@@ -286,6 +351,13 @@
 
         .logo {
             padding: 0 4rem;
+        }
+
+        @include breakpoint(untilTablet) {
+            padding: .5rem 1rem;
+            .logo {
+                padding: 0 .5rem;
+            }
         }
     }
 
@@ -318,6 +390,14 @@
             border: 1px solid $primary;
             margin-top: 1rem;
         }
+
+        @include breakpoint(untilTablet) {
+            .title-wrapper {
+                .title {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }
 
@@ -329,9 +409,12 @@
         position: relative;
         z-index: 4;
         color: white;
-        width: 80%;
-        margin: auto;
         padding: 8rem 0;
+
+        @include breakpoint(laptop) {
+            width: 80%;
+            margin: auto;
+        }
 
         h2 {
             font-size: 6rem;
@@ -362,6 +445,48 @@
             .button {
                 padding: .5rem 3rem !important;
                 cursor: pointer;
+            }
+        }
+
+        @include breakpoint(mobileonly) {
+            padding: 4rem 0;
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 3rem;
+            }
+
+            .item {
+                font-size: 1.25rem;
+                margin-bottom: 1.5rem;
+
+                .date {
+                    margin-right: 1rem;
+                }
+            }
+
+            .button {
+                font-size: 1rem;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            padding: 4rem 0;
+            h2 {
+                font-size: 4rem;
+                margin-bottom: 3rem;
+            }
+
+            .item {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+
+                .date {
+                    margin-right: 1rem;
+                }
+            }
+
+            .button {
+                font-size: 1.5rem;
             }
         }
     }
@@ -399,6 +524,12 @@ footer {
         }
     }
 
+    select.form-control {
+        &:focus {
+            color: rgb(185, 185, 185);
+        }
+    }
+
     .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: white;
         opacity: .3; /* Firefox */
@@ -424,6 +555,25 @@ footer {
                 font-size: 1.5rem;
                 margin-right: 1rem;
             }
+        }
+        .end-image {
+            text-align: end;
+        }
+    }
+
+    @include breakpoint(mobileonly) {
+
+        .footer-end {
+            .end-image {
+                text-align: center;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    @include breakpoint (untilTablet) { 
+        .btn-white {
+            margin-top: 2rem;
         }
     }
 }

@@ -13,11 +13,82 @@
     user-select: none;
     z-index: 100;
     padding: 2rem;
+    overflow: auto;
+
+    .icon-close {
+        display: none;
+        position: absolute;
+        top: 2rem;
+        right: 20px;
+        font-size: 1.5rem;
+    }
+
 
     &.active {
-        width: 20%;
+        width: 30%;
         visibility: visible;
         transition: all .4s ease;
         opacity: 1;
+    }
+    @include breakpoint(untilTablet) {
+        &.active {
+            width: 100vw;
+        }
+
+        .icon-close {
+            display: block;
+        }
+    }
+
+    .side-image {
+        margin-bottom: 2rem;
+
+        img {
+            max-width: 120px;
+        }
+    }
+
+    .side-desc {
+        font-size: 1.25rem;
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+    }
+
+    .ep {
+        margin-bottom: 4rem;
+        .ep-title {
+            font-size: 3rem;
+        }
+        .ep-desc {
+            font-style: italic;
+            text-transform: uppercase;
+            margin-top: -1rem;
+            font-size: .8rem;
+            line-height: 2rem;
+        }
+    }
+
+    .socials {
+        margin-bottom: 3rem;
+        a {
+            display: block;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+        /* width */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $primary;
+    }
+
+        /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgb(187, 187, 187);
     }
 }

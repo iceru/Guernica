@@ -5,6 +5,10 @@
         width: 80%;
         cursor: pointer;
 
+        @include breakpoint(untilTablet) {
+            width: 100%;
+        }
+
         img {
             width: 100%;
             object-fit: contain;
@@ -18,20 +22,44 @@
     .menu {
         display: flex;
         justify-content: flex-end;
-        ul {
+        > ul {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             margin: 0;
+            padding: 0;
+
+            .dropdown-menu {
+                background-color: $primary;
+                padding: 0;
+                a {
+                    color: white;
+                    padding: 1rem;
+                }
+
+                .dropdown-item:hover {
+                    background-color: darken($primary, 10%);
+                }
+            }
 
             a {
                 font-size: 1.25rem;
                 text-transform: uppercase;
+                transition: .2s ease;
+
+                &.show {
+                    li {
+                        background-color: $primary;
+                        color: white;
+                        transition: .2s ease;
+                    }
+                }
                 li {
                     padding: 1rem 1.75rem;
                     border-right: 1px solid $primary;
+                    border-top: 1px solid $primary;
                     height: 100%;
-    
+                    
                 }
                 
                 &:first-child {
@@ -43,6 +71,24 @@
                 &:last-child {
                     li {
                         border-right: none;
+                    }
+                }
+            }
+                
+            @include breakpoint(mobileonly) {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                a {
+                    font-size: 1rem;
+                    width: 33.3%;
+                    text-align: center;
+                    li {
+                        border: 1px solid $primary;
+                    }
+                    &:last-child {
+                        li {
+                            border-right: 1px solid $primary;
+                        }
                     }
                 }
             }
