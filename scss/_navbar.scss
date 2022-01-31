@@ -12,6 +12,10 @@
         img {
             width: 100%;
             object-fit: contain;
+
+            @include breakpoint(desktop) {
+                width: 85%;
+            }
         }
     }
 
