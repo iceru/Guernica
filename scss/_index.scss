@@ -1,5 +1,22 @@
+.video-popup {
+    width:75%;
+    margin:0 auto;
+}
+  
+.video-popup iframe{
+    width:100%;
+    margin:0 auto;
+}
+
+.close-popup {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
 .hero {
     padding: 1.5rem 0 5rem;
+    font-family: 'Arial', sans-serif;
     .image {
         width: 10%;
         cursor: pointer;
@@ -104,9 +121,14 @@
         transform: translate(-50%, -50%);
         color: white;
         z-index: 10;
+        font-family: 'Rawgly', sans-serif;
         
         h1 {
             font-size: 120px;
+        }
+
+        span {
+            font-family: 'Petit Formal Script', sans-serif;
         }
 
         @include breakpoint(untilTablet) {
@@ -119,6 +141,7 @@
 
 .stream {
     position: relative;
+    font-family: 'Helvetica Neue', sans-serif;
     .container-fluid {
         z-index: 3;
         position: relative;
@@ -300,6 +323,8 @@
     position: relative;
     margin-bottom: 2rem;
     @include header-background();
+    font-family: 'Helvetica Neue', sans-serif;
+
 
     .press-items {
         padding: 2rem 0;
@@ -342,6 +367,8 @@
 
 .videos {
     @include header-background();
+    font-family: 'Helvetica Neue', sans-serif;
+
     .top-bar {
         margin-top: 2rem;
         display: flex;
@@ -370,6 +397,56 @@
     .video-items {
         padding: 1rem;
         border: 1px solid $primary;
+
+        .thumbnail-wrapper {
+            position: relative;
+
+            &:hover {
+                .play {
+                    opacity: 1;
+                    transition: all .2s ease; 
+                }
+            }
+        }
+
+        .play {
+            position: absolute;
+            display: inline;
+            color: white;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            height: 2rem;
+            width: 2rem;
+            z-index: 4;
+            opacity: 0;
+            transition: all .2s ease; 
+        }
+
+
+        .thumbnail {
+            position: relative;
+
+            &:after {
+                opacity: 0;
+                transition: all .2s ease; 
+                content: '';
+                position: absolute;
+                background-color: rgba($color: $primary, $alpha: 0.5);
+                transition: all .2s ease;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            &:hover {
+                &:after {
+                   
+                    opacity: 1;
+                }
+            }
+        }
         
         .item {
             margin-top: 2rem;
@@ -410,6 +487,7 @@
 .dates {
     position: relative;
     margin-top: 4rem;
+    font-family: 'Helvetica Neue', sans-serif;
 
     .date-items {
         position: relative;
@@ -423,16 +501,14 @@
         }
 
         h2 {
-            font-size: 6rem;
+            font-size: 3.5rem;
             text-align: center;
-            margin-bottom: 6rem;
         }
         .item {
-            font-size: 2.25rem;
+            font-size: 1.75rem;
             display: flex;
             width: 90%;
             margin: auto;
-            margin-bottom: 3rem;
             
             .date {
                 margin-right: 4rem;
@@ -493,6 +569,19 @@
 
             .button {
                 font-size: 1.5rem;
+            }
+        }
+
+        @include breakpoint(desktop) {
+            padding: 8rem 0;
+            h2 {
+                font-size: 5.5rem;
+                margin-bottom: 6rem;
+            }
+
+            .item {
+                font-size: 2.25rem;
+                margin-bottom: 3rem;
             }
         }
     }

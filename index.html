@@ -25,6 +25,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+        integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/style.css">
     <title>Guernica Club</title>
 </head>
@@ -222,7 +230,7 @@
                 <img src="/images/primary-gradient.png" alt="Lyrics">
             </div>
             <div class="banner-title">
-                <h1>LYRICS</h1>
+                <h1>LY<span class="petit">R</span>ICS</h1>
             </div>
         </div>
         <div class="songs-pops" id="pops">
@@ -463,31 +471,33 @@
                     <div class="item song" id="starry-night">
                         <div class="number">1</div>
                         <div class="item-title">
-                            Starry Night
+                            St<span class="rawgly">a</span>rry <span class="petit">Night</span>
                         </div>
                     </div>
                     <div class="item song" id="hanahaki-disease">
                         <div class="number">2</div>
                         <div class="item-title">
-                            Hanahaki Disease
+                            H<span class="rawgly">a</span>n<span class="rawgly">a</span>h<span class="rawgly">a</span>ki
+                            Dis<span class="petit">e</span><span class="rawgly">a</span>se
                         </div>
                     </div>
                     <div class="item song" id="uncertainty">
                         <div class="number">3</div>
                         <div class="item-title">
-                            Uncertainty
+                            Unc<span class="petit">e</span>rtainty
                         </div>
                     </div>
                     <div class="item song" id="pandemic">
                         <div class="number">4</div>
                         <div class="item-title">
-                            Pandemic
+                            Pand<span class="petit">e</span>mic
                         </div>
                     </div>
                     <div class="item song" id="cherry-blossom">
                         <div class="number">5</div>
                         <div class="item-title">
-                            Cherry Blossom
+                            Ch<span class="petit">e</span>rry <span class="petit">B</span>lo<span
+                                class="rawgly">ss</span>om
                         </div>
                     </div>
                 </div>
@@ -504,7 +514,7 @@
                 <img src="/images/primary-gradient.png" alt="Press">
             </div>
             <div class="banner-title">
-                <h1>PRESS</h1>
+                <h1><span>P</span>RESS</h1>
             </div>
         </div>
         <div class="container-fluid">
@@ -561,7 +571,7 @@
                 <img src="/images/primary-gradient.png" alt="Videos">
             </div>
             <div class="banner-title">
-                <h1>VIDEOS</h1>
+                <h1>VIDE<span>O</span>S</h1>
             </div>
         </div>
 
@@ -583,11 +593,27 @@
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <div class="item">
-                                    <div class="ratio ratio-16x9 video">
-                                        <iframe src="https://www.youtube.com/embed/Nsbp0GQHOGc"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
+                                    <a href="#video_popup_1" id="video_link_1">
+                                        <div class="thumbnail-wrapper">
+                                            <span class="play rawgly">
+                                                <i class="fa fa-play" aria-hidden="true"></i>
+                                            </span>
+                                            <div class="thumbnail ratio ratio-16x9">
+                                                <img src="https://img.youtube.com/vi/Nsbp0GQHOGc/0.jpg"
+                                                    style="height: 100%; object-fit: cover;" class="w-100" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div id="video_popup_1" class=" mfp-hide d-flex video-popup">
+                                        <div class="ratio ratio-16x9 video" >
+                                            <iframe src="https://www.youtube.com/embed/Nsbp0GQHOGc"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <div class="close-popup ms-3">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
                                     </div>
                                     <div class="title-wrapper">
                                         <div class="title">
@@ -598,11 +624,27 @@
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="item">
-                                    <div class="ratio ratio-16x9 video">
-                                        <iframe src="https://www.youtube.com/embed/Nsbp0GQHOGc"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
+                                    <a href="#video_popup_2" id="video_link_2">
+                                        <div class="thumbnail-wrapper">
+                                            <span class="play rawgly">
+                                                <i class="fa fa-play" aria-hidden="true"></i>
+                                            </span>
+                                            <div class="thumbnail ratio ratio-16x9">
+                                                <img src="https://img.youtube.com/vi/Nsbp0GQHOGc/0.jpg"
+                                                    style="height: 100%; object-fit: cover;" class="w-100" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div id="video_popup_2" class=" mfp-hide d-flex video-popup">
+                                        <div class="ratio ratio-16x9 video" >
+                                            <iframe src="https://www.youtube.com/embed/Nsbp0GQHOGc"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <div class="close-popup ms-3">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
                                     </div>
                                     <div class="title-wrapper">
                                         <div class="title">
@@ -613,11 +655,27 @@
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="item">
-                                    <div class="ratio ratio-16x9 video">
-                                        <iframe src="https://www.youtube.com/embed/Nsbp0GQHOGc"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
+                                    <a href="#video_popup_3" id="video_link_3">
+                                        <div class="thumbnail-wrapper">
+                                            <span class="play rawgly">
+                                                <i class="fa fa-play" aria-hidden="true"></i>
+                                            </span>
+                                            <div class="thumbnail ratio ratio-16x9">
+                                                <img src="https://img.youtube.com/vi/Nsbp0GQHOGc/0.jpg"
+                                                    style="height: 100%; object-fit: cover;" class="w-100" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div id="video_popup_3" class=" mfp-hide d-flex video-popup">
+                                        <div class="ratio ratio-16x9 video" >
+                                            <iframe src="https://www.youtube.com/embed/Nsbp0GQHOGc"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <div class="close-popup ms-3">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
                                     </div>
                                     <div class="title-wrapper">
                                         <div class="title">
@@ -647,7 +705,7 @@
             <img src="/images/primary-gradient.png" alt="Save the Date">
         </div>
         <div class="date-items">
-            <h2>SAVE THE DATE</h2>
+            <h2 class="rawgly">SAVE THE DATE</h2>
             <div class="item">
                 <div class="date">
                     04.01.2022 <br>
@@ -821,6 +879,17 @@
     $(document).ready(function () {
         $('.items-more').hide();
         $('.sidebar-container').hide();
+
+        for (let index = 1; index <= 3; index++) {
+            $('#video_link_'+index).magnificPopup({
+                showCloseBtn: true,
+                closeMarkup: 'test'
+            });  
+        }
+    });
+
+    $('.close-popup').on( "click", function() {
+        $.magnificPopup.close();
     });
     function sidebarSlide() {
         var timeoutSidebar = $('.sidebar').hasClass('active') ? 300 : 0;
@@ -836,8 +905,8 @@
         }, timeout);
     }
 
-    $('body').click(function (e) { 
-        if($('.sidebar').hasClass('active')) {
+    $('body').click(function (e) {
+        if ($('.sidebar').hasClass('active')) {
             e.preventDefault();
             var timeoutSidebar = $('.sidebar').hasClass('active') ? 300 : 0;
             var timeout = $('.sidebar').hasClass('active') ? 0 : 300;
@@ -860,13 +929,13 @@
     $('.sidebar .icon-close').click(function () {
         sidebarSlide();
     })
-    $('.title').click(function () {
+    $('.stream .title').click(function () {
         $(this).toggleClass('active');
-        $('.title-alt').toggleClass('active');
+        $('.stream .title-alt').toggleClass('active');
         $('.background.alt').toggleClass('active');
     });
 
-    $('.title-alt').click(function () {
+    $('.stream .title-alt').click(function () {
         $(this).toggleClass('active');
         $('.title').toggleClass('active');
         $('.background.alt').toggleClass('active');

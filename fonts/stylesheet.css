@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Rawgly';
+    src: url('Rawgly-Regular.eot');
+    src: url('Rawgly-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Rawgly-Regular.woff2') format('woff2'),
+        url('Rawgly-Regular.woff') format('woff'),
+        url('Rawgly-Regular.ttf') format('truetype'),
+        url('Rawgly-Regular.svg#Rawgly-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Petit Formal Script';
+    src: url('PetitFormalScript-Regular.eot');
+    src: url('PetitFormalScript-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PetitFormalScript-Regular.woff2') format('woff2'),
+        url('PetitFormalScript-Regular.woff') format('woff'),
+        url('PetitFormalScript-Regular.ttf') format('truetype'),
+        url('PetitFormalScript-Regular.svg#PetitFormalScript-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
