@@ -2,6 +2,10 @@
     padding: 1.5rem 0 5rem;
     .image {
         width: 10%;
+        cursor: pointer;
+        transition: all .4s ease;
+        visibility: visible;
+        opacity: 1;
         img {
             width: 100%;
         }
@@ -115,8 +119,6 @@
 
 .stream {
     position: relative;
-    margin-bottom: 2rem;
-
     .container-fluid {
         z-index: 3;
         position: relative;
@@ -325,6 +327,10 @@
                     width: 100%;
                     text-align: center;
                     margin-bottom: 1rem;
+
+                    img {
+                        width: 100%;
+                    }
                 }
                .text {
                     font-size: 1rem;

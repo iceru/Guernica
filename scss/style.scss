@@ -19,6 +19,12 @@ body {
         @include breakpoint(untilTablet) {
             left: 100%;
         }
+
+        .hero .image {
+            visibility: hidden;
+            opacity: 0;
+            transition: all .4s ease;
+        }
     }
 }
 

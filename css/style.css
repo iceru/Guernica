@@ -116,7 +116,7 @@
   transition: .2s ease;
 }
 
-.navigation .menu > ul a.show li {
+.navigation .menu > ul a.show li, .navigation .menu > ul a:hover li {
   background-color: #DB4C38;
   color: white;
   -webkit-transition: .2s ease;
@@ -156,6 +156,9 @@
   }
   .navigation .menu > ul a:last-child li {
     border-right: 1px solid #DB4C38;
+  }
+  .navigation .menu > ul .dropdown {
+    width: 33.3%;
   }
 }
 
@@ -267,6 +270,11 @@
 
 .hero .image {
   width: 10%;
+  cursor: pointer;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  visibility: visible;
+  opacity: 1;
 }
 
 .hero .image img {
@@ -372,7 +380,6 @@
 
 .stream {
   position: relative;
-  margin-bottom: 2rem;
 }
 
 .stream .container-fluid {
@@ -660,6 +667,9 @@
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
+  }
+  .press .press-items .item .image-wrapper img {
+    width: 100%;
   }
   .press .press-items .item .text {
     font-size: 1rem;
@@ -990,6 +1000,13 @@ body.sidebar-active {
   body.sidebar-active {
     left: 100%;
   }
+}
+
+body.sidebar-active .hero .image {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 a {

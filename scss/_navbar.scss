@@ -47,7 +47,7 @@
                 text-transform: uppercase;
                 transition: .2s ease;
 
-                &.show {
+                &.show, &:hover {
                     li {
                         background-color: $primary;
                         color: white;
@@ -90,6 +90,10 @@
                             border-right: 1px solid $primary;
                         }
                     }
+                }
+
+                .dropdown {
+                    width: 33.3%;
                 }
             }
         }

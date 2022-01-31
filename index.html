@@ -30,51 +30,6 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navigation">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-5">
-                        <div class="image" id="side_click">
-                            <img src="/images/navigation-image.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-7 px-0">
-                        <div class="menu">
-                            <ul>
-                                <div class="dropdown">
-                                    <a href="" role="button" id="dropdownMenu" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <li>EP1/EP2</li>
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                                <a href="#press">
-                                    <li>PRESS</li>
-                                </a>
-                                <a href="#lyrics">
-                                    <li>Lyrics</li>
-                                </a>
-                                <a href="#videos">
-                                    <li>Videos</li>
-                                </a>
-                                <a href="">
-                                    <li>Live</li>
-                                </a>
-                                <a href="">
-                                    <li>Shop</li>
-                                </a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
 
     <div class="sidebar">
         <div class="sidebar-container">
@@ -131,6 +86,51 @@
             </div>
         </div>
     </div>
+    <nav>
+        <div class="navigation">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-5">
+                        <div class="image">
+                            <img src="/images/navigation-image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7 px-0">
+                        <div class="menu">
+                            <ul>
+                                <div class="dropdown">
+                                    <a href="" role="button" id="dropdownMenu" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <li>EP1/EP2</li>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                                <a href="#press">
+                                    <li>PRESS</li>
+                                </a>
+                                <a href="#lyrics">
+                                    <li>Lyrics</li>
+                                </a>
+                                <a href="#videos">
+                                    <li>Videos</li>
+                                </a>
+                                <a href="">
+                                    <li>Live</li>
+                                </a>
+                                <a href="">
+                                    <li>Shop</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <div class="floating-social">
         <a href="#">
@@ -149,7 +149,7 @@
 
     <div class="hero" id="hero">
         <div class="container-fluid">
-            <div class="image">
+            <div class="image" id="side_click">
                 <img src="/images/logo.png" alt="Guernica Club">
             </div>
             <div class="row">
@@ -772,7 +772,7 @@
             </div>
 
             <div class="row footer-end align-items-end">
-                <div class="col-6 col-md-4">
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <div>Stream now</div>
                     <div class="d-flex streams">
                         <a href="">
@@ -789,7 +789,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 col-md-4">
+                <div class="col-12 col-md-4">
                     <div>Catch us</div>
                     <div class="d-flex streams">
                         <a href="#">
@@ -835,6 +835,23 @@
             $('.sidebar-container').fadeToggle('fast');
         }, timeout);
     }
+
+    $('body').click(function (e) { 
+        if($('.sidebar').hasClass('active')) {
+            e.preventDefault();
+            var timeoutSidebar = $('.sidebar').hasClass('active') ? 300 : 0;
+            var timeout = $('.sidebar').hasClass('active') ? 0 : 300;
+
+            setTimeout(function () {
+                $('.sidebar').removeClass('active');
+                $('body').removeClass('sidebar-active');
+            }, timeoutSidebar);
+
+            setTimeout(function () {
+                $('.sidebar-container').fadeToggle('fast');
+            }, timeout);
+        }
+    });
 
     $('#side_click').click(function () {
         sidebarSlide();
