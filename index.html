@@ -213,8 +213,19 @@
                         illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
                         blandit praesent
                     </div>
+                    <div class="text-body text-alt">
+                        ALT - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+                        illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
+                        blandit praesent
+                    </div>
                     <div class="button-wrapper">
                         <a class="button btn-primary" href="">Stream Here</a>
+                    </div>
+                    <div class="button-wrapper button-alt">
+                        <a class="button btn-primary" href="">ALT - Stream Here</a>
                     </div>
                 </div>
             </div>
@@ -879,6 +890,9 @@
     $(document).ready(function () {
         $('.items-more').hide();
         $('.sidebar-container').hide();
+        $('.stream .button-alt').hide();
+        $('.stream .text-alt').hide();
+
 
         for (let index = 1; index <= 3; index++) {
             $('#video_link_'+index).magnificPopup({
@@ -932,12 +946,20 @@
     $('.stream .title').click(function () {
         $(this).toggleClass('active');
         $('.stream .title-alt').toggleClass('active');
+        $('.stream .text-body').show();
+        $('.stream .text-alt').hide();
+        $('.stream .button-wrapper').show();
+        $('.stream .button-alt').hide();
         $('.background.alt').toggleClass('active');
     });
 
     $('.stream .title-alt').click(function () {
         $(this).toggleClass('active');
         $('.title').toggleClass('active');
+        $('.stream .text-body').hide();
+        $('.stream .text-alt').show();
+        $('.stream .button-wrapper').hide();
+        $('.stream .button-alt').show();
         $('.background.alt').toggleClass('active');
     });
 
